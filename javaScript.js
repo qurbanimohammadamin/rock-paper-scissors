@@ -1,6 +1,31 @@
 
 
 
+//this function check the result of game and return a message
+function checkResult(userSelection, computerSelection){
+    let userSelectionToLowerCase = userSelection.toLowerCase();
+    let result = "";
+    if(userSelectionToLowerCase === computerSelection){result = "equal!";}
+    else if(userSelectionToLowerCase === "rock"){
+        if(computerSelection === "paper"){result = "you lose!"}
+        else result = "you win!";
+    }
+    else if( userSelectionToLowerCase === "paper"){
+        if(computerSelection === "scissors"){result = "you lose!"}
+        else result = "you win!";
+    }
+    else if(userSelectionToLowerCase === "scissors"){
+        if(computerSelection==="rock"){result = "you lose!"}
+        else result = " you win!"
+    }
+     else result = "spell not correct!";
+     return result; 
+    
+}
+
+
+
+
 //this function get the computer choice(rock, paper, scissors) randomly
 function getComputerChoice(){
     let result;
