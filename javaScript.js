@@ -1,24 +1,24 @@
 
 
 
-//this function check the result of game and return a message
+//this function check the result of game and return 1 for win, 0 for lose and -1 for equal
 function checkResult(userSelection, computerSelection){
     let userSelectionToLowerCase = userSelection.toLowerCase();
-    let result = "";
-    if(userSelectionToLowerCase === computerSelection){result = "equal!";}
+    let result = -1;
+    if(userSelectionToLowerCase === computerSelection){result = -1;}
     else if(userSelectionToLowerCase === "rock"){
-        if(computerSelection === "paper"){result = "you lose!"}
-        else result = "you win!";
+        if(computerSelection === "paper"){result = 0;}
+        else result = 1;
     }
     else if( userSelectionToLowerCase === "paper"){
-        if(computerSelection === "scissors"){result = "you lose!"}
-        else result = "you win!";
+        if(computerSelection === "scissors"){result =0;}
+        else result = 1;
     }
     else if(userSelectionToLowerCase === "scissors"){
-        if(computerSelection==="rock"){result = "you lose!"}
-        else result = " you win!"
+        if(computerSelection==="rock"){result = 0;}
+        else result = 1;
     }
-     else result = "spell not correct!";
+     else result = -1;
      return result; 
     
 }
