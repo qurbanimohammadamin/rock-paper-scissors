@@ -1,3 +1,29 @@
+playGame();
+
+function playGame(){
+    let result = 0;
+  
+    for (let i = 0; i<5; i++){
+        let checkR = checkResult(playerSelection(),getComputerChoice());
+        if(checkR == 1){
+            ++result;
+        }
+        else if(checkR == -1){
+            i--;
+        }
+    }
+
+    if (result >= 3){
+        alert("you win!");
+    }
+    else 
+        alert("you lose!");
+}
+
+
+
+
+
 
 
 
