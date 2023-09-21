@@ -1,3 +1,7 @@
+
+
+
+//this function get the computer choice(rock, paper, scissors) randomly
 function getComputerChoice(){
     let result;
     let random = Math.random() * 100;
@@ -6,3 +10,13 @@ function getComputerChoice(){
     else {result = "scissors";}
     return result;
 }
+
+
+
+
+//this function get the player choice(rock, paper, scissors) by a prompt
+function playerSelection(){
+    let result = prompt("inter your choice:");
+    return result;
+}
+
